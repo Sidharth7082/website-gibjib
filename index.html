@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gibjib</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #050505);
+    color: #ffffff; /* Text color */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, p {
+    text-align: center;
+    font-size: 5rem;
+    
+  }
+  img{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+
+  }
+  .intro{
+    color: green;
+  }
+  .button {
+        display: inline-block;
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 24px;
+        cursor: pointer;
+        border-radius: 8px;
+        position: fixed;
+top: 10px;
+right: 10px;
+
+    }
+    @media(max-width:600px) and (min-width:30px){
+      img {
+        margin-top: 400px;
+        height: 40px;
+        width: 40px;
+      }
+      .intro {
+        font-size: 2rem;
+        margin-top: 40px;
+      }
+      .button {
+        font-size: 8px;
+        padding: 6px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+    }
+    .form-container {
+        width: 300px;
+        margin: 100px auto;
+        background-color: #fff;
+        border-radius: 20px; /* Rounded corners on all sides */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-container form {
+        display: none;
+    }
+
+    .form-container form.active {
+        display: block;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-container input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .toggle-link {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .toggle-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .toggle-link a:hover {
+        text-decoration: underline;
+    }
+    .nwespan{
+      color: #000000;
+    }
+    @keyframes gradientChange {
+    0% {
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffc3a0, #ffafbd);
+    }
+    100% {
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    }
+}
+.star {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background-color: #fff;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+    
+ 
+    
+  
+</style>
+
+</head>
+<body>
+
+   <a href="./1-button.html" class="button">Click me</a> 
+
+  <div class="container">
+    <h1 class="intro" > Gibjib!</h1>
+    <p></p>
+    <img src="./logo.jpg" alt="Example Image" margin: 0 auto;">
+  </div>
+  <div class="form-container">
+    <h2>Login</h2>
+    <form class="login-form active" action="#" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <form class="signup-form" action="#" method="post">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <div class="toggle-link">
+        <span class="nwespan">I don't have an account?</span>
+        <a href="#" onclick="toggleForm()">Sign up</a>
+    </div>
+</div>
+
+<script>
+    function toggleForm() {
+        const loginForm = document.querySelector('.login-form');
+        const signupForm = document.querySelector('.signup-form');
+        
+        loginForm.classList.toggle('active');
+        signupForm.classList.toggle('active');
+    }
+</script>
+<script src="./script.js"></script>
+  
+</body>
+</html>
